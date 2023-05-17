@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="UTF-8">
+  <title>COCO - Common Objects in Context</title>
+  <script type="text/javascript" async="" src="COCO%20-%20Common%20Objects%20in%20Context_files/ga.js"></script><script async="" src="COCO%20-%20Common%20Objects%20in%20Context_files/analytics.js"></script><script src="COCO%20-%20Common%20Objects%20in%20Context_files/jquery.min.js"></script>
+  <link rel="stylesheet" href="COCO%20-%20Common%20Objects%20in%20Context_files/jquery-ui.css">
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="COCO%20-%20Common%20Objects%20in%20Context_files/bootstrap.min.css">
+  <link rel="stylesheet" href="COCO%20-%20Common%20Objects%20in%20Context_files/bootstrap-theme.min.css">
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/bootstrap.min.js"></script>
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/jquery.dataTables.min.js"></script>
+  <link rel="stylesheet" href="COCO%20-%20Common%20Objects%20in%20Context_files/jquery.dataTables.min.css">
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/dataTables.buttons.min.js"></script>
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/buttons.html5.min.js"></script>
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/latest.js"></script>
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/jszip.min.js"></script>
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/pdfmake.min.js"></script><script type="text/javascript" async="" src="COCO%20-%20Common%20Objects%20in%20Context_files/MathJax.js"></script>
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/vfs_fonts.js"></script>
+  <link rel="stylesheet" href="COCO%20-%20Common%20Objects%20in%20Context_files/buttons.dataTables.min.css">
+  <link rel="stylesheet" href="COCO%20-%20Common%20Objects%20in%20Context_files/cocostyles.css">
+  <script src="COCO%20-%20Common%20Objects%20in%20Context_files/cocoscripts.js"></script>
+  <script>googleAnalytics();</script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1px; bottom: 2px; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+
+<body><div id="MathJax_Message" style="display: none;"></div>
+  <script>$(function(){datasetTabNav()});</script>
+  <div id="header"><div id="headerBody">
+    <img id="headerImage" src="COCO%20-%20Common%20Objects%20in%20Context_files/coco-logo.png" alt="Logo">
+    <div id="headerTabs">
+      <div id="headerEmail">info@cocodataset.org</div>
+      <ul class="nav nav-tabs">
+        <li class="active">
+          <div class="nav-tab-header"></div>
+          <a data-toggle="tab" href="#home" aria-expanded="true">Home</a>
+        </li>
+        <li class="">
+          <div class="nav-tab-header"></div>
+          <a data-toggle="tab" href="#people" aria-expanded="false">People</a>
+        </li>
+        <li class="dropdown">
+          <div class="nav-tab-header"></div>
+          <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Dataset<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tab" href="#overview"><i class="glyphicon glyphicon-info-sign"></i> Overview</a></li>
+            <li><a data-toggle="tab" href="#explore"><i class="glyphicon glyphicon-search"></i> Explore</a></li>
+            <li><a data-toggle="tab" href="#download"><i class="glyphicon glyphicon-download"></i> Download</a></li>
+            <li><a data-toggle="tab" href="#external"><i class="glyphicon glyphicon-cloud-download"></i> External</a></li>
+            <li><a data-toggle="tab" href="#termsofuse"><i class="glyphicon glyphicon-list-alt"></i> Terms of Use</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div class="nav-tab-header"></div>
+          <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Tasks<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a data-toggle="tab" href="#detection-2020"><i class="glyphicon glyphicon-king"></i> Detection 2020</a></li>
+            <li><a data-toggle="tab" href="#keypoints-2020"><i class="glyphicon glyphicon-king"></i> Keypoints 2020</a></li>
+            <li><a data-toggle="tab" href="#panoptic-2020"><i class="glyphicon glyphicon-king"></i> Panoptic 2020</a></li>
+            <li><a data-toggle="tab" href="#densepose-2020"><i class="glyphicon glyphicon-king"></i> DensePose 2020</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="#detection-2019"><i class="glyphicon glyphicon-king"></i> Detection 2019</a></li>
+            <li><a data-toggle="tab" href="#keypoints-2019"><i class="glyphicon glyphicon-king"></i> Keypoints 2019</a></li>
+            <li><a data-toggle="tab" href="#stuff-2019"><i class="glyphicon glyphicon-king"></i> Stuff 2019</a></li>
+            <li><a data-toggle="tab" href="#panoptic-2019"><i class="glyphicon glyphicon-king"></i> Panoptic 2019</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="#detection-2018"><i class="glyphicon glyphicon-king"></i> Detection 2018</a></li>
+            <li><a data-toggle="tab" href="#keypoints-2018"><i class="glyphicon glyphicon-king"></i> Keypoints 2018</a></li>
+            <li><a data-toggle="tab" href="#stuff-2018"><i class="glyphicon glyphicon-king"></i> Stuff 2018</a></li>
+            <li><a data-toggle="tab" href="#panoptic-2018"><i class="glyphicon glyphicon-king"></i> Panoptic 2018</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="#detection-2017"><i class="glyphicon glyphicon-king"></i> Detection 2017</a></li>
+            <li><a data-toggle="tab" href="#keypoints-2017"><i class="glyphicon glyphicon-king"></i> Keypoints 2017</a></li>
+            <li><a data-toggle="tab" href="#stuff-2017"><i class="glyphicon glyphicon-king"></i> Stuff 2017</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="#detection-2016"><i class="glyphicon glyphicon-king"></i> Detection 2016</a></li>
+            <li><a data-toggle="tab" href="#keypoints-2016"><i class="glyphicon glyphicon-king"></i> Keypoints 2016</a></li>
+            <li class="divider"></li>
+            <li><a data-toggle="tab" href="#detection-2015"><i class="glyphicon glyphicon-king"></i> Detection 2015</a></li>
+            <li><a data-toggle="tab" href="#captions-2015"><i class="glyphicon glyphicon-king"></i> Captioning 2015</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <div class="nav-tab-header"></div>
+          <a class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Evaluate<b class="caret"></b></a>
+          <ul class="dropdown-menu">
+            <li><a>Participate:</a></li>
+            <li><a data-toggle="tab" href="#format-data">&nbsp;<i class="glyphicon glyphicon-cog"></i> Data Format</a></li>
+            <li><a data-toggle="tab" href="#format-results">&nbsp;<i class="glyphicon glyphicon-cog"></i> Results Format</a></li>
+            <li><a data-toggle="tab" href="#guidelines">&nbsp;<i class="glyphicon glyphicon-cog"></i> Test Guidelines</a></li>
+            <li><a data-toggle="tab" href="#upload">&nbsp;<i class="glyphicon glyphicon-cog"></i> Upload Results</a></li>
+            <li class="divider"></li>
+            <li><a>Evaluate:</a></li>
+            <li><a data-toggle="tab" href="#detection-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Detection</a></li>
+            <li><a data-toggle="tab" href="#keypoints-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Keypoints</a></li>
+            <li><a data-toggle="tab" href="#stuff-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Stuff</a></li>
+            <li><a data-toggle="tab" href="#panoptic-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Panoptic</a></li>
+            <li><a data-toggle="tab" href="#densepose-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> DensePose</a></li>
+            <li><a data-toggle="tab" href="#captions-eval">&nbsp;<i class="glyphicon glyphicon-stats"></i> Captions</a></li>
+            <li class="divider"></li>
+            <li><a>Leaderboards:</a></li>
+            <li><a data-toggle="tab" href="#detection-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Detection</a></li>
+            <li><a data-toggle="tab" href="#keypoints-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Keypoints</a></li>
+            <li><a data-toggle="tab" href="#stuff-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Stuff</a></li>
+            <li><a data-toggle="tab" href="#panoptic-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Panoptic</a></li>
+            <li><a data-toggle="tab" href="#captions-leaderboard">&nbsp;<i class="glyphicon glyphicon-th-list"></i> Captions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div></div>
+  <div id="content" class="tab-content">
+    <div role="tabpanel" class="tab-pane fade active in" id="home"><script>$(function(){populateHomePage()})</script>
+<h1>News</h1>
+<ul class="fontSubtle fontBigger">
+  <li>We are pleased to announce the <a href="https://www.lvisdataset.org/challenge_2021">LVIS 2021 Challenge and Workshop</a> to be held at ICCV.</li>
+  <li>Please note that there will not be a COCO 2021 Challenge, instead,
+ we encourage people to participate in the LVIS 2021 Challenge.</li>
+  <li>We have partnered with the team behind the open-source tool <a class="fontBoldish" href="https://fiftyone.ai/">FiftyOne</a> to make it easier to download, visualize, and evaluate COCO</li>
+  <li><a class="fontBoldish" href="https://fiftyone.ai/">FiftyOne</a> is
+ an open-source tool facilitating visualization and access to COCO data 
+resources and serves as an evaluation tool for model analysis on COCO.</li>
+  <!--
+  <li>We are pleased to announce the COCO 2020 <a class="fontBoldish" href="#detection-2020">Detection</a>, <a class="fontBoldish" href="#keypoints-2020">Keypoint</a>, <a class="fontBoldish" href="#panoptic-2020">Panoptic</a>, and <a class="fontBoldish" href="#densepose-2020">DensePose</a> Challenges.<br/></li>
+  <li class="fontBoldish">The new rules and awards for this year challenges encourage innovative methods.</li>
+  <li>Results to be announced at the <a class="fontBoldish" href="workshop/coco-lvis-eccv-2020.html">Joint COCO and LVIS Recognition</a> ECCV workshop.</li>
+  -->
+  <!--
+  <li>We are pleased to announce the COCO 2019 <a class="fontBoldish" href="#detection-2019">Detection</a>, <a class="fontBoldish" href="#keypoints-2019">Keypoint</a>, <a class="fontBoldish" href="#panoptic-2019">Panoptic</a>, and <a class="fontBoldish" href="http://densepose.org/">DensePose</a> Challenges.<br/></li>
+  <li class="fontBoldish">The new rules and awards for this year challenges encourage innovative methods.</li>
+  <li>Results to be announced at the <a class="fontBoldish" href="workshop/coco-mapillary-iccv-2019.html">Joint COCO and Mapillary Recognition</a> ICCV workshop.</li> -->
+  <!--
+  <li>Congratulations to the <b>winners</b> of the <a class="fontBoldish" href="workshop/coco-mapillary-eccv-2018.html">ECCV 2018 Joint COCO and Mapillary Recognition</a> Workshop! Please visit the challenge website to view the winners and their talk slides.</li>
+  <li><span class="fontBoldish">Note: COCO challenge deadline extended to August 17th.</span></li>
+  <li>We are pleased to announce the COCO 2018 <a class="fontBoldish" href="#detection-2018">Detection</a> and <a class="fontBoldish" href="#keypoints-2018">Keypoint</a> Challenges.<br/></li>
+  <li>Check out the new COCO <a class="fontBoldish" href="#panoptic-2018">Panoptic Segmentation</a> and <a class="fontBoldish" href="http://densepose.org/" target="_blank">DensePose</a> Challenges!</br></li>
+  <li>Results to be announced at the <a class="fontBoldish" href="workshop/coco-mapillary-eccv-2018.html">Joint COCO and Mapillary Recognition</a> ECCV workshop.</li>
+  -->
+</ul>
+<div class="columnFeatures">
+  <h1>What is COCO?</h1>
+  <img class="iconsImage" src="COCO%20-%20Common%20Objects%20in%20Context_files/coco-icons.png">
+  <p class="fontSubtle">COCO is a large-scale object detection, segmentation, and captioning dataset. COCO has several features:</p>
+  <ul class="fontSubtle fontBold noBullet">
+    <li class="checkBullet">Object segmentation</li>
+    <li class="checkBullet">Recognition in context</li>
+    <li class="checkBullet">Superpixel stuff segmentation</li>
+    <li class="checkBullet">330K images (&gt;200K labeled)</li>
+    <li class="checkBullet">1.5 million object instances</li>
+    <li class="checkBullet">80 object categories</li>
+    <li class="checkBullet">91 stuff categories</li>
+    <li class="checkBullet">5 captions per image</li>
+    <li class="checkBullet">250,000 people with keypoints</li>
+  </ul>
+</div>
+<div class="columnPeople">
+  <h1>Collaborators</h1>
+  <div class="fontSubtle" id="cocoPeople"><span class="fontBold">Tsung-Yi Lin</span> Google Brain<br><span class="fontBold">Genevieve Patterson</span> MSR, Trash TV<br><span class="fontBold">Matteo R. Ronchi</span> Caltech<br><span class="fontBold">Yin Cui</span> Google<br><span class="fontBold">Michael Maire</span> TTI-Chicago<br><span class="fontBold">Serge Belongie</span> Cornell Tech<br><span class="fontBold">Lubomir Bourdev</span> WaveOne, Inc.<br><span class="fontBold">Ross Girshick</span> FAIR<br><span class="fontBold">James Hays</span> Georgia Tech<br><span class="fontBold">Pietro Perona</span> Caltech<br><span class="fontBold">Deva Ramanan</span> CMU<br><span class="fontBold">Larry Zitnick</span> FAIR<br><span class="fontBold">Piotr Dollár</span> FAIR<br></div>
+</div>
+<div class="columnSponsors">
+  <h1>Sponsors</h1>
+  <p><a href="http://www.cvdfoundation.org/" target="_blank"><img class="wide" src="COCO%20-%20Common%20Objects%20in%20Context_files/sponsors-CVDF.png"></a></p>
+  <p><img class="wide" src="COCO%20-%20Common%20Objects%20in%20Context_files/sponsors-microsoft.png"></p>
+  <p><img class="wide" src="COCO%20-%20Common%20Objects%20in%20Context_files/sponsors-facebook.png"></p>
+  <p><img class="wide" src="COCO%20-%20Common%20Objects%20in%20Context_files/sponsors-MightyAI.svg"></p>
+</div>
+<p><a href="http://arxiv.org/abs/1405.0312" target="_blank"><img class="wide" src="COCO%20-%20Common%20Objects%20in%20Context_files/coco-paper.png"></a></p>
+<p><img class="wide" src="COCO%20-%20Common%20Objects%20in%20Context_files/coco-examples.jpg"></p>
+</div>
+  <div role="tabpanel" class="tab-pane fade" id="people"><script>$(function(){populatePeoplePage()})</script>
+<h1>COCO Consortium</h1>
+<div id="TsungYiLin" class="cocoPerson"><canvas id="TsungYiLin" width="140" height="200"></canvas></div><div id="GenevievePatterson" class="cocoPerson"><canvas id="GenevievePatterson" width="140" height="200"></canvas></div><div id="MatteoRonchi" class="cocoPerson"><canvas id="MatteoRonchi" width="140" height="200"></canvas></div><div id="YinCui" class="cocoPerson"><canvas id="YinCui" width="140" height="200"></canvas></div><div id="MichaelMaire" class="cocoPerson"><canvas id="MichaelMaire" width="140" height="200"></canvas></div><div id="SergeBelongie" class="cocoPerson"><canvas id="SergeBelongie" width="140" height="200"></canvas></div><div id="LubomirBourdev" class="cocoPerson"><canvas id="LubomirBourdev" width="140" height="200"></canvas></div><div id="RossGirshick" class="cocoPerson"><canvas id="RossGirshick" width="140" height="200"></canvas></div><div id="JamesHays" class="cocoPerson"><canvas id="JamesHays" width="140" height="200"></canvas></div><div id="PietroPerona" class="cocoPerson"><canvas id="PietroPerona" width="140" height="200"></canvas></div><div id="DevaRamanan" class="cocoPerson"><canvas id="DevaRamanan" width="140" height="200"></canvas></div><div id="LarryZitnick" class="cocoPerson"><canvas id="LarryZitnick" width="140" height="200"></canvas></div><div id="PiotrDollar" class="cocoPerson"><canvas id="PiotrDollar" width="140" height="200"></canvas></div></div>
+<div role="tabpanel" class="tab-pane fade" id="overview"></div>
+<div role="tabpanel" class="tab-pane fade" id="explore"></div>
+<div role="tabpanel" class="tab-pane fade" id="download"></div>
+<div role="tabpanel" class="tab-pane fade" id="external"></div>
+<div role="tabpanel" class="tab-pane fade" id="termsofuse"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2020"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2020"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-2020"></div>
+<div role="tabpanel" class="tab-pane fade" id="densepose-2020"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2019"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2019"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-2019"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-2019"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2018"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2018"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-2018"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-2018"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2017"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2017"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-2017"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2016"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-2016"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-2015"></div>
+<div role="tabpanel" class="tab-pane fade" id="captions-2015"></div>
+<div role="tabpanel" class="tab-pane fade" id="format-data"></div>
+<div role="tabpanel" class="tab-pane fade" id="format-results"></div>
+<div role="tabpanel" class="tab-pane fade" id="guidelines"></div>
+<div role="tabpanel" class="tab-pane fade" id="upload"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="densepose-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="captions-eval"></div>
+<div role="tabpanel" class="tab-pane fade" id="detection-leaderboard"></div>
+<div role="tabpanel" class="tab-pane fade" id="keypoints-leaderboard"></div>
+<div role="tabpanel" class="tab-pane fade" id="stuff-leaderboard"></div>
+<div role="tabpanel" class="tab-pane fade" id="panoptic-leaderboard"></div>
+<div role="tabpanel" class="tab-pane fade" id="captions-leaderboard"></div>
+</div>
+  <div id="footer"><div>
+    <a href="https://github.com/cocodataset/cocodataset.github.io" target="_blank">Github Page Source</a>
+    <a href="#termsofuse">Terms of Use</a>
+  </div></div>
+
+</body></html>
