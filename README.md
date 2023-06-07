@@ -10,7 +10,7 @@
 # Strawberry maturity detection system
 
 <h4 align="center">
- Detection system based on [YOLOv5](https://github.com/ultralytics/yolov5).
+ Detection system based on <a href="https://github.com/ultralytics/yolov5">YOLOv5</a>.
 </h4>
 
 <div align="center">
