@@ -28,7 +28,7 @@
   <a href="https://github.com/fancywang0704/fancywang0704.github.io/Features"><b>Features</b></a> |
   <a href="https://github.com/fancywang0704/fancywang0704.github.io/Home Page"><b>Home Page</b></a> |
   <a href="https://github.com/fancywang0704/fancywang0704.github.io/Static photo detection display"><b>Static photo detection display</b></a> |
-  <a href="https://github.com/fancywang0704/fancywang0704.github.io/Dynamic video detection display"><b>Dynamic video detection display</b></a> 
+  <a href="https://github.com/fancywang0704/fancywang0704.github.io/Real-time video detection display"><b>Real-time video detection display</b></a> 
 </div>
 
 <br/>
@@ -46,7 +46,7 @@ Strawberry maturity detection system is a system that uses computer vision techn
 ![home_page](https://github.com/fancywang0704/fancywang0704.github.io/assets/101705236/911154d6-c579-440a-abd6-f1854b24a398)
 ## Static photo detection display
 ![photo_detection](https://github.com/fancywang0704/fancywang0704.github.io/assets/101705236/d573c4e0-becc-4f8d-8164-45a950b63044)
-## Dynamic video detection display
+## Real-time video detection display
 https://github.com/fancywang0704/fancywang0704.github.io/assets/101705236/520e60c3-3296-402b-adcd-5ddecb9f7f06
 
 
