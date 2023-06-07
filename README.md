@@ -28,7 +28,7 @@
   <a href="https://github.com/fancywang0704/fancywang0704.github.io/Features"><b>Features</b></a> |
   <a href="https://github.com/fancywang0704/fancywang0704.github.io/Home Page"><b>Home Page</b></a> |
   <a href="https://github.com/fancywang0704/fancywang0704.github.io/Static photo detection display"><b>Static photo detection display</b></a> |
-  <a href="https://github.com/fancywang0704/fancywang0704.github.io/Dynamic video detection display"><b>Dynamic video detection display</b></a> |
+  <a href="https://github.com/fancywang0704/fancywang0704.github.io/Dynamic video detection display"><b>Dynamic video detection display</b></a> 
 </div>
 
 <br/>
