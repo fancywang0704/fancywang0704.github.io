@@ -7,7 +7,7 @@
 
 ## A comprehensive strawberry digital image dataset website [see https://fancywang0704.github.io]
 
-# Strawberry maturity detection system
+# Strawberry Maturity Detection System
 
 <h4 align="center">
  Detection system based on <a href="https://github.com/ultralytics/yolov5">YOLOv5</a>.
