@@ -40,5 +40,10 @@ Strawberry maturity detection system is a system that uses computer vision techn
 - Play/Pause/Finished
 - Statistical test results
 - After the test is completed, the test results are automatically saved.
-## Detection interface display
+## Home Page
+![home_page](https://github.com/fancywang0704/fancywang0704.github.io/assets/101705236/911154d6-c579-440a-abd6-f1854b24a398)
+## Static photo detection display
+![photo_detection](https://github.com/fancywang0704/fancywang0704.github.io/assets/101705236/d573c4e0-becc-4f8d-8164-45a950b63044)
+## Dynamic video detection display
+
 
